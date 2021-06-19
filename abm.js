@@ -13,10 +13,8 @@ function $(nombre)
 
 function load(){
     //alert(boton)
-    document.getElementById("btnEnviar").addEventListener("click",enviarParametrosPOST)
+    document.getElementById("btnGuardar").addEventListener("click",enviarParametrosPOST)
 }
-
-
 
 function click(event){
     enviarMsjeServidor(miBackEnd, retornoDelClick)
@@ -30,11 +28,6 @@ function retornoDelClick(respuesta){
 
     $("usuario").value=respuesta; 
 }
-
-
-
-
-
 
 function enviarMsjeServidor(servidor, funcionARealizar){
     
@@ -72,8 +65,13 @@ function enviarParametrosPOST(){
 
     //agrega datos para pasar por POST
     var datos = new FormData();
-    datos.append("email",$("txtEmail").value);
-    datos.append("pass",$("txtPass").value);
+    datos.append("nombre",$("txtNombre").value);
+    datos.append("apellido",$("txtApellido").value);
+    datos.append("dni",$("txtDni").value);
+    datos.append("telefono",$("txtTelefono").value);
+    datos.append("correo",$("txtCorreoElectronico").value);
+    datos.append("archivo",$("archivo").files[0]);
+    
 
     //indico hacia donde va el mensaje
     xmlhttp.open ("POST", miBackEnd, true); 
