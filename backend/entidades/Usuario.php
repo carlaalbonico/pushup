@@ -1,6 +1,6 @@
 <?php   
 
-    class Socio {
+    class Usuario {
   
         //atributos
         public $nombre;
@@ -8,6 +8,8 @@
         public $dni;
         public $telefono;
         public $correo;  
+       
+
     }
 
 
