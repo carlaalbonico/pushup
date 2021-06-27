@@ -24,7 +24,7 @@ function enviarParametrosPOST(){
 
     //agrega datos para pasar por POST
     var datos = new FormData();
-    datos.append("email",$("txtEmail").value);
+    datos.append("users",$("txtUsers").value);
     datos.append("pass",$("txtPass").value);
 
     //indico hacia donde va el mensaje
