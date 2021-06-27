@@ -2,7 +2,7 @@
 addEventListener("load",load)
  
 //variable del servidor
-var miBackEnd = 'https://servpushup.herokuapp.com/';
+var miBackEnd = 'https://apppushup.herokuapp.com/';
 
 //DOM
 function $(nombre)
