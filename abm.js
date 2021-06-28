@@ -2,7 +2,8 @@
 addEventListener("load",load)
  
 //variable del servidor
-var miBackEnd = 'https://apppushup.herokuapp.com/';
+//var miBackEnd = 'https://apppushup.herokuapp.com/';
+var miBackEnd = 'http://localhost:8083/signin/';
 
 //DOM
 function $(nombre)
@@ -16,18 +17,7 @@ function load(){
     document.getElementById("btnGuardar").addEventListener("click",enviarParametrosPOST)
 }
 
-function click(event){
-    enviarMsjeServidor(miBackEnd, retornoDelClick)
-    //se suele mostrar antes de la respuesta del servidor
-    alert("despues de la llamada");
 
-}
-
-function retornoDelClick(respuesta){
-    alert(respuesta); 
-
-    $("usuario").value=respuesta; 
-}
 
 function enviarMsjeServidor(servidor, funcionARealizar){
     
@@ -65,12 +55,10 @@ function enviarParametrosPOST(){
 
     //agrega datos para pasar por POST
     var datos = new FormData();
-    datos.append("nombre",$("txtNombre").value);
-    datos.append("apellido",$("txtApellido").value);
-    datos.append("dni",$("txtDni").value);
-    datos.append("telefono",$("txtTelefono").value);
-    datos.append("correo",$("txtCorreoElectronico").value);
-    datos.append("archivo",$("archivo").files[0]);
+    datos.append("user",$("txtNewUser").value);
+    datos.append("pass",$("txtNePass").value);
+
+    //datos.append("archivo",$("archivo").files[0]);
     
 
     //indico hacia donde va el mensaje

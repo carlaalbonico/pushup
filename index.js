@@ -1,8 +1,10 @@
 //agrega funcion load a HTML; 
 addEventListener("load",load)
  
-//variable del servidor
-var miBackEnd = 'https://apppushup.herokuapp.com/';
+//variable del servidor Heroku
+//var miBackEnd = 'https://apppushup.herokuapp.com/';
+var miBackEnd = 'http://localhost:8083/login/';
+
 
 //DOM
 function $(nombre)
@@ -24,7 +26,7 @@ function enviarParametrosPOST(){
 
     //agrega datos para pasar por POST
     var datos = new FormData();
-    datos.append("users",$("txtUsers").value);
+    datos.append("user",$("txtUser").value);
     datos.append("pass",$("txtPass").value);
 
     //indico hacia donde va el mensaje
@@ -49,6 +51,7 @@ function enviarParametrosPOST(){
 
     //envio el mensaje 
     xmlhttp.send(datos);
+    var_dump(datos);
 
 
 }
