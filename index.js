@@ -2,7 +2,7 @@
 addEventListener("load",load)
  
 //variable del servidor Heroku
-var miBackEnd = 'https://apppushup.herokuapp.com/login/';
+var miBackEnd = 'http://apppushup.herokuapp.com/login/';
 //var miBackEnd = 'http://localhost:8083/login/';
 
 
@@ -51,7 +51,7 @@ function enviarParametrosPOST(){
 
     //envio el mensaje 
     xmlhttp.send(datos);
-    var_dump(datos);
+    
 
 
 }
