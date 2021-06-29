@@ -2,8 +2,8 @@
 addEventListener("load",load)
  
 //variable del servidor Heroku
-var miBackEnd = 'http://apppushup.herokuapp.com/login/';
-//var miBackEnd = 'http://localhost:8083/login/';
+//var miBackEnd = "https://apppushup.herokuapp.com/login";
+var miBackEnd = "http://localhost:8080/login";
 
 
 //DOM
@@ -30,7 +30,7 @@ function enviarParametrosPOST(){
     datos.append("pass",$("txtPass").value);
 
     //indico hacia donde va el mensaje
-    xmlhttp.open ("POST", miBackEnd, true); 
+    xmlhttp.open ("POST", miBackEnd+'/enviar/', true); 
 
     //seteo el evento
     xmlhttp.onreadystatechange = function(){
