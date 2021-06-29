@@ -5,8 +5,8 @@ addEventListener("load",load)
 // aca llega con "https://localhost:8080/Registro/Nuevo" por POST
  
 //variable del servidor
-//var miBackEnd = "https://apppushup.herokuapp.com/";
-var miBackEnd = "https://localhost:8080/";
+var miBackEnd = "https://apppushup.herokuapp.com/";
+//var miBackEnd = "https://localhost:8880/";
 
 //DOM
 function $(nombre)

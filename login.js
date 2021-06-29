@@ -2,8 +2,8 @@
 addEventListener("load",load)
  
 //variable del servidor Heroku
-//var miBackEnd = "https://apppushup.herokuapp.com/";
-var miBackEnd = "http://localhost:8080/";
+var miBackEnd = "https://apppushup.herokuapp.com/";
+//var miBackEnd = "https://localhost:8880/";
 
 
 //DOM
