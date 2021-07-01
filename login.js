@@ -67,8 +67,8 @@ function enviarParametrosPOST(servidor, funcionARealizar){
 
     //agrega datos para pasar por POST
     var datos = new FormData();
-    datos.append("user",$("txtUser").value);
-    datos.append("pass",$("txtPass").value);
+    datos.append("user",$("user").value);
+    datos.append("pass",$("pass").value);
 
     //indico hacia donde va el mensaje
     xmlhttp.open ("POST", servidor, true); 
@@ -88,7 +88,7 @@ function enviarParametrosPOST(servidor, funcionARealizar){
         }
     }
     //esto va siempre cuando se hace un formulario
-    xmlhttp.setRequestHeader("enctype","multipart/form-data");
+   // xmlhttp.setRequestHeader("enctype","multipart/form-data");
 
     //envio el mensaje 
     xmlhttp.send(datos);
