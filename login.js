@@ -26,7 +26,7 @@ function click(){
 function respuestadelServidor(respuesta){
 
     if(respuesta == "Acceso correcto"){
-        window.location.assign(miBackEnd + "index.html");
+        window.location.assign("https://tiendapushup.herokuapp.com/index.html");
     }
     else{
         
