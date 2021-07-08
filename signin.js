@@ -5,7 +5,7 @@ addEventListener("load",load)
 // aca llega con "https://localhost:8080/Registro/Nuevo" por POST
  
 //variable del servidor
-var miBackEnd = "https://apppushup.herokuapp.com";
+var miBackEnd = "https://apppushup.herokuapp.com/";
 //var miBackEnd = "https://localhost:8880/";
 
 //DOM
@@ -22,7 +22,7 @@ function load(){
 
 
 function click(){
-    enviarMensajeAlServidorPorPOST(miBackEnd + "signin/enviar", respuestaServidor);
+    enviarParametrosPOST(miBackEnd + "signin/enviar", respuestaServidor);
 }
 
 function respuestaServidor(respuesta){
