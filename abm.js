@@ -19,6 +19,7 @@ function load(){
     
     document.getElementById("btnSignin").addEventListener("click",clickSignin);
 
+    document.getElementById("btnProd").addEventListener("click",clickAbm);
 }
 
 function clickLogin(){
@@ -28,6 +29,9 @@ function clickSignin(){
     window.location.assign("https://tiendapushup.herokuapp.com/signin.html");
 }
 
+function clickAbm(){
+    window.location.assign("https://tiendapushup.herokuapp.com/abm.html");
+}
 function completarTabla(respuesta){
 
    
