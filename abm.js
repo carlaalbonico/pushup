@@ -14,7 +14,9 @@ function $(nombre)
 
 
 function load(){
-    //alert(boton)
+
+    cargarOpciones(); 
+
     document.getElementById("btnLogin").addEventListener("click",clickLogin); 
     
     document.getElementById("btnSignin").addEventListener("click",clickSignin);
@@ -34,10 +36,27 @@ function clickAbm(){
 }
 function completarTabla(respuesta){
 
-   
         $("mensajeError").innerHTML = respuesta;
     
 }
+
+
+function cargarOpciones() {
+    
+    var opciones = ['<option value=0>Seleccion una opcion</option>']
+
+
+    $("slctCategria").innerHTML = opciones;
+}
+
+function click(){
+    enviarParametrosGET(miBackEnd + "/producto", respuestaServidor);
+}
+
+function respuestaServidor(respuesta){
+   
+}
+
 
 function confirmarBorrar(){
 
@@ -58,7 +77,8 @@ function enviarParametrosGET(servidor, funcionARealizar){
         if(xmlhttp.readyState == XMLHttpRequest.DONE){
 
             if(xmlhttp.status == 200){
-                funcionARealizar(xmlhttp.responseText);
+                console.log(xmlhttp.responseText)
+                //funcionARealizar(xmlhttp.responseText);
             }
             else{
                 alert("Ocurrio un error");
