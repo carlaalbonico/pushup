@@ -2,15 +2,26 @@ html,
 body {
   height: 100%;
 }
-
-#contenedor {
-  display: flex;
+#login {
+  background-color:rgba(245, 245, 245, 0.733) ;
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: rgb(103 99 99);
+}
+.registrar {
+  width: 40%;
+  background: #fff;
+  border: radius 1em; ;
+  padding: 3em;
+  position: fixed;
+  top: 100px;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  
   
 }
+
 
 .form-abm {
   width: 100%;

@@ -41,39 +41,62 @@
     <title>Login</title>
     
 </header>
-<body  class="text-center" id="contenedor">
+<body  class="text-center" id="login">
     
-    <main class="form-signin">
-      <form>
-        <!--<img class="mb-4" src="img/logo.png"  alt="" width="200" height="">-->
-        <h1 class="h3 mb-3 fw-normal">Bienvenido</h1>
-    
-        <div class="form-floating">
-          <input type="text" class="form-control" id="user" placeholder="name">
-          <label for="floatingInput">Email </label>
-        </div>
-        <div class="form-floating">
-          <input type="password" class="form-control" id="pass" placeholder="Contraseña">
-          <label for="floatingPassword">Contraseña</label>
-        </div>
-    <!--<div class="checkbox mb-3">
-          <label>
-            <input type="checkbox" value="remember-me"> Recuerdame
-          </label>
-        </div>-->
-        
-        <button class="w-100 btn btn-lg btn-primary" type="button" id="btnEnviar">Ingresar</button>
-        
-          <div class="mb-4">¿No tienes una cuenta? 
-              <a href="signin.html">Registrate</a>
+    <main >
+
+
+      <div class="container">
+        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+          <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+  
+          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="#" class="nav-link px-2 link-secondary">HOME</a></li>
+            <li><a href="#" class="nav-link px-2 link-secondary">Productos</a></li>
+            <li><a href="#" class="nav-link px-2 link-dark">Quienes somos</a></li>
+          </ul>
+  
+          <div class="col-md-3 text-end">
+            <button type="button" class="btn btn-primary"  id="btnSignin">Registrate</button>
+            
           </div>
-          <div class="mb-4">
-            <p id="mensajeError"></p>
-          </div>
-          
-          
+        </header>
       </div>
-      </form>
+  
+      <div  id="registrar">
+        <form class="form-signin">
+          <!--<img class="mb-4" src="img/logo.png"  alt="" width="200" height="">-->
+          <h1 class="h3 mb-3 fw-normal">Bienvenido</h1>
+      
+          <div class="form-floating">
+            <input type="text" class="form-control" id="user" placeholder="name">
+            <label for="floatingInput">Email </label>
+          </div>
+          <div class="form-floating">
+            <input type="password" class="form-control" id="pass" placeholder="Contraseña">
+            <label for="floatingPassword">Contraseña</label>
+          </div>
+      <!--<div class="checkbox mb-3">
+            <label>
+              <input type="checkbox" value="remember-me"> Recuerdame
+            </label>
+          </div>-->
+          
+          <button class="w-100 btn btn-lg btn-primary" type="button" id="btnEnviar">Ingresar</button>
+          
+            <div class="mb-4">¿No tienes una cuenta? 
+                <a href="signin.html">Registrate</a>
+            </div>
+            <div class="mb-4">
+              <p id="mensajeError"></p>
+            </div>
+            
+            
+        </div>
+        </form>
+    </div>
     </main>
     
     
