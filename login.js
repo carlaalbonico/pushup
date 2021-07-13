@@ -15,7 +15,13 @@ function $(nombre)
 
 function load(){
     //alert(boton)
-    document.getElementById("btnEnviar").addEventListener("click",click)
+    document.getElementById("btnEnviar").addEventListener("click",click);
+     document.getElementById("btnSignin").addEventListener("click",clickSignin);
+}
+
+
+function clickSignin(){
+    window.location.assign("https://tiendapushup.herokuapp.com/signin.html");
 }
 
 function click(){
