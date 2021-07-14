@@ -17,7 +17,7 @@ function load(){
 
     cargarOpciones(); 
 
-    enviarParametrosGET(miBackEnd + "/producto"); 
+    enviarParametrosGET(miBackEnd + "producto/mostrar"); 
 
     document.getElementById("btnLogin").addEventListener("click",clickLogin); 
     
