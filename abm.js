@@ -17,6 +17,8 @@ function load(){
 
     cargarOpciones(); 
 
+    enviarParametrosGET(miBackEnd + "/producto", respuestaServidor)
+
     document.getElementById("btnLogin").addEventListener("click",clickLogin); 
     
     document.getElementById("btnSignin").addEventListener("click",clickSignin);
@@ -54,13 +56,31 @@ function click(){
 }
 
 function respuestaServidor(respuesta){
-   
+    alert("llego respuesta");
 }
 
 
 function confirmarBorrar(){
 
     return confirm('Estás seguro que deseas eliminar el registro?');
+
+}
+
+function mostrarTabla(rta){
+
+    for(var i=0;i<rta.length; i++){
+        $('tableProducto').innerHTML=
+        '<tr >'+
+        '<th scope="row">'+rta[i].nombre+'</th>'+
+        '<td>'+rta[i].desc+'</td>'+
+        '<td>'+rta[i].precio+'</td>'+
+        
+        '<td><a href="" class="btn btn-success" >editar</a></td>'+
+        '<td><a href="" class="btn btn-danger" onclick="">borrar</a></td>'+
+        '</tr>'; 
+
+    } 
+
 
 }
 
@@ -77,7 +97,7 @@ function enviarParametrosGET(servidor, funcionARealizar){
         if(xmlhttp.readyState == XMLHttpRequest.DONE){
 
             if(xmlhttp.status == 200){
-                console.log(xmlhttp.responseText)
+                console.log(xmlhttp.responseText);
                 //funcionARealizar(xmlhttp.responseText);
             }
             else{
