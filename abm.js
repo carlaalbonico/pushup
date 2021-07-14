@@ -17,7 +17,7 @@ function load(){
 
     cargarOpciones(); 
 
-    enviarParametrosGET(miBackEnd + "/producto", respuestaServidor)
+    enviarParametrosGET(miBackEnd + "/producto"); 
 
     document.getElementById("btnLogin").addEventListener("click",clickLogin); 
     
@@ -84,7 +84,7 @@ function mostrarTabla(rta){
 
 }
 
-function enviarParametrosGET(servidor, funcionARealizar){
+function enviarParametrosGET(servidor){
 
     //Declaro el objeto
     var xmlhttp = new XMLHttpRequest();
