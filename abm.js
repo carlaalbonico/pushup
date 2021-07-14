@@ -24,6 +24,10 @@ function load(){
     document.getElementById("btnSignin").addEventListener("click",clickSignin);
 
     document.getElementById("btnProd").addEventListener("click",clickAbm);
+
+
+    document.getElementById("btnAgregar").addEventListener("click",click);
+
 }
 
 function clickLogin(){
@@ -42,14 +46,33 @@ function completarTabla(respuesta){
     
 }
 
+function click(){
+    enviarParametrosPOST(miBackEnd + "producto/agregar", respuestaAgregar); 
+}
+
+
+function respuestaAgregar(respuesta){
+    var opciones = ['<option value=0>Seleccion una opcion</option>']
+    
+    //actualiza campos a blanco
+    $("txtNewNombre").value = "";
+    $("txtNewDesc").value = "";
+    $("txtNewPrecio").value = "";
+
+    $("slctNwCategoria").innerHTML = opciones;
+
+    //escribe mensaje
+    $("mensajeAgregar").innerHTML = respuesta;
+    
+}
 
 function cargarOpciones() {
     
     var opciones = ['<option value=0>Seleccion una opcion</option>']
 
 
-    $("slctCategria").innerHTML = opciones;
-}
+    $("slctCategoria").innerHTML = opciones;
+}o
 
 function click(){
     enviarParametrosGET(miBackEnd + "producto/mostrar", respuestaServidor);
@@ -107,4 +130,45 @@ function enviarParametrosGET(servidor){
     }
     //Envio el mensaje
     xmlhttp.send();
+}
+function enviarParametrosPOST(servidor,funcionARealizar){
+
+    //declaro el objeto
+    var xmlhttp = new XMLHttpRequest(); 
+
+    //agrega datos para pasar por POST
+    var datos = new FormData();
+    datos.append("nombre",$("txtNewNombre").value);
+    datos.append("desc",$("txtNewDesc").value);
+    datos.append("precio",$("txtNewPrecio").value);
+    datos.append("categoria",$("txtNewCategoria").value);
+
+    //datos.append("archivo",$("archivo").files[0]);
+    
+
+    //indico hacia donde va el mensaje
+    xmlhttp.open ("POST", servidor, true); 
+
+    //seteo el evento
+    xmlhttp.onreadystatechange = function(){
+        //veo si llego la respuesta del servidor
+        if(xmlhttp.readyState==XMLHttpRequest.DONE){
+            //reviso si la respuesta del servidor es la correcta
+            if(xmlhttp.status==200){
+                
+                funcionARealizar(xmlhttp.responseText);
+
+            }else{
+                alert("ocurrio un error al agregar")
+            };
+        }
+    }
+    //esto va siempre cuando se hace un formulario
+    xmlhttp.setRequestHeader("enctype","multipart/form-data");
+
+    //envio el mensaje 
+    xmlhttp.send(datos);
+    
+
+
 }

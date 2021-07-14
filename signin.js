@@ -75,7 +75,7 @@ function enviarParametrosPOST(servidor,funcionARealizar){
         }
     }
     //esto va siempre cuando se hace un formulario
-    xmlhttp.setRequestHeader("enctype","multipart/form-data");
+   // xmlhttp.setRequestHeader("enctype","multipart/form-data");
 
     //envio el mensaje 
     xmlhttp.send(datos);
