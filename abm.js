@@ -52,7 +52,7 @@ function cargarOpciones() {
 }
 
 function click(){
-    enviarParametrosGET(miBackEnd + "/producto", respuestaServidor);
+    enviarParametrosGET(miBackEnd + "producto/mostrar", respuestaServidor);
 }
 
 function respuestaServidor(respuesta){
