@@ -33,34 +33,36 @@
   <h1>Productos</h1>
   <br>
 
+  <h2 class="col-md-4 text-center">Agrega productos</h2>
 
-  <div class="col-md-4">
+  <div class="col-md-4 text-center">
     <label >Nombre: </label>
     <input  type="text" class="form-control" id="txtNewNombre" >
   </div>
 
-  <div class="col-md-4">
+  <div class="col-md-4 text-center">
     <label >Descripcion: </label>
     <input type="text" class="form-control" id="txtNewDesc" >
 
   </div>
 
-  <div class="col-md-4">
+  <div class="col-md-4 text-center">
     <label >Precio: </label>
     <input type="text" class="form-control" id="txtNewPrecio" >
     
   </div>
 
-  <div class="col-md-4">
+  <div class="col-md-4 text-center">
     <label >Categoria: </label>
     <input type="text" class="form-control" id="txtNewCategoria" >
   </div>
 
    <!--<label class="col-md-3 ">Categoria: </label>
     <select id="slctNwCategoria" class="col-md-6"  >-->
-
-  <input class="col-md-4 "type="button" id="btnAgregar" value="Agregar un producto" class="btn btn-light"  >
-  <hr>
+  <div class="col-md-4">
+    <input class="col-md-4 " type="button" id="btnAgregar" value="Agregar un producto" class="btn btn-light"  >
+  </div>
+    <hr>
   <p id="mensajeAgregar"></p>
   <br>
 
@@ -70,7 +72,7 @@
     
   
   </div>
-    <table class="table"class="col-md-2 text-end" >
+    <table id="tablaProductos" class="table"class="col-md-2 text-end" >
       <thead>	
         <tr>
       
@@ -81,21 +83,10 @@
           </tr>
       
       </thead>
-      
-
+    
       <tbody id="tableProducto">
-        <tr >
-          <th scope="row"></th>
-          <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
         
-          <td><a href="" class="btn btn-success" >editar</a></td>
-        
-          <td><a href="" class="btn btn-danger" onclick="">borrar</a></td>
-        </tr>
-        </tbody>
+      </tbody>
     
     </table>
       
