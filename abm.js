@@ -98,7 +98,7 @@ function mostrarTabla(valor){
     for(var i=0;i<valor.length; i++){
         $('tableProducto').innerHTML=
         '<tr >'+
-        '<th scope="row">'+rta[i].nombre+'</th>'+
+        '<th scope="row">'+valor[i].nombre+'</th>'+
         '<td>'+valor[i].desc+'</td>'+
         '<td>'+valor[i].precio+'</td>'+
         '<td>'+valor[i].categoria+'</td>'+
