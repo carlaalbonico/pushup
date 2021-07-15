@@ -17,7 +17,7 @@ function load(){
 
     cargarOpciones(); 
 
-    enviarParametrosGET(miBackEnd + "producto/mostrar"); 
+    enviarParametrosGET(miBackEnd + "producto/mostrar", mostrarTabla); 
 
 
     document.getElementById("btnAgregar").addEventListener("click",click);
@@ -60,7 +60,7 @@ function cargarOpciones() {
 }
 
 function clickMostrar(){
-    enviarParametrosGET(miBackEnd + "producto/mostrar", respuestaServidor);
+    enviarParametrosGET(miBackEnd + "producto/mostrar", mostrarTabla);
 }
 
 function respuestaServidor(respuesta){
@@ -82,7 +82,7 @@ function mostrarTabla(rta){
         '<th scope="row">'+rta[i].nombre+'</th>'+
         '<td>'+rta[i].desc+'</td>'+
         '<td>'+rta[i].precio+'</td>'+
-        
+        '<td>'+rta[i].categoria+'</td>'+
         '<td><a href="" class="btn btn-success" >editar</a></td>'+
         '<td><a href="" class="btn btn-danger" onclick="">borrar</a></td>'+
         '</tr>'; 
