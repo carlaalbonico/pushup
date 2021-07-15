@@ -5,7 +5,7 @@
    
    
    <!-- agrego css-->
-   <link rel="stylesheet" href="index.css">
+   <link rel="stylesheet" href="login.css">
 
 
    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -33,7 +33,7 @@
   <h1>Productos</h1>
   <br>
   <div class="container">
-    <div class="row justify-content-center">
+    <div class="form-abm">
       <h2 class="col-md-4 text-center">Agrega productos</h2>
 
       <div class="col-md-4 text-center">
@@ -49,7 +49,7 @@
 
       <div class="col-md-4 text-center">
         <label >Precio: </label>
-        <input type="text" class="form-control" id="txtNewPrecio" >
+        <input class="col-md-4 text-center" type="text" class="form-control" id="txtNewPrecio" >
         
       </div>
 
@@ -58,11 +58,12 @@
         <input type="text" class="form-control" id="txtNewCategoria" >
       </div>
     </div>
-  </div>
+  
    <!--<label class="col-md-3 ">Categoria: </label>
     <select id="slctNwCategoria" class="col-md-6"  >-->
-  <div class="col-md-4">
-    <input  type="button" id="btnAgregar" value="Agregar un producto" class="btn btn-light"  >
+    <div class="col-md-4">
+      <input  type="button" id="btnAgregar" value="Agregar un producto" class="btn btn-light"  >
+    </div>
   </div>
     <hr>
   <p id="mensajeAgregar"></p>
