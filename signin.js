@@ -1,5 +1,5 @@
 //agrega funcion load a HTML; 
-addEventListener("load",load)
+addEventListener("load",load); 
 
 
 // aca llega con "https://localhost:8080/Registro/Nuevo" por POST
@@ -16,7 +16,7 @@ function $(nombre)
 
 
 function load(){
-    document.getElementById("btnLogin").addEventListener("click",clickLogin); 
+   
     //alert(boton)
     document.getElementById("btnGuardar").addEventListener("click",click);
 

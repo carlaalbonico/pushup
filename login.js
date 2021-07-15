@@ -1,5 +1,5 @@
 //agrega funcion load a HTML; 
-addEventListener("load",load)
+addEventListener("load",load); 
  
 //variable del servidor Heroku
 var miBackEnd = "https://apppushup.herokuapp.com/";
