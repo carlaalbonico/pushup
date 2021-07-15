@@ -32,7 +32,7 @@ function completarTabla(respuesta){
 
 function click(){
     enviarParametrosPOST(miBackEnd + "producto/agregar", respuestaAgregar); 
-    enviarParametrosGET(miBackEnd + "producto/mostrar",mostrarTabla); 
+    
 }
 
 
