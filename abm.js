@@ -56,9 +56,9 @@ function cargarOpciones() {
 
 
     $("slctCategoria").innerHTML = opciones;
-}o
+}
 
-function click(){
+function clickMostrar(){
     enviarParametrosGET(miBackEnd + "producto/mostrar", respuestaServidor);
 }
 
