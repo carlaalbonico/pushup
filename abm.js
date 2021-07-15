@@ -32,6 +32,7 @@ function completarTabla(respuesta){
 
 function click(){
     enviarParametrosPOST(miBackEnd + "producto/agregar", respuestaAgregar); 
+    enviarParametrosGET(miBackEnd + "producto/mostrar",mostrarTabla); 
 }
 
 
@@ -86,7 +87,7 @@ function mostrarTabla(valor){
     analiza.forEach(element => {
         opciones.push('<tr >'+
         '<th scope="row">'+element.nombre+'</th>'+
-        '<td>'+element.desc+'</td>'+
+        '<td>'+element.descrip+'</td>'+
         '<td>'+element.precio+'</td>'+
         '<td>'+element.categoria+'</td>'+
         /*'<td><a href="" class="btn btn-success" >editar</a></td>'+
@@ -133,7 +134,7 @@ function enviarParametrosPOST(servidor,funcionARealizar){
     //agrega datos para pasar por POST
     var datos = new FormData();
     datos.append("nombre",$("txtNewNombre").value);
-    datos.append("desc",$("txtNewDesc").value);
+    datos.append("descrip",$("txtNewDesc").value);
     datos.append("precio",$("txtNewPrecio").value);
     datos.append("categoria",$("txtNewCategoria").value);
 
