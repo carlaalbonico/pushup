@@ -15,7 +15,7 @@ function $(nombre)
 
 function load(){
 
-    cargarOpciones(); 
+    //cargarOpciones(); 
 
     enviarParametrosGET(miBackEnd + "producto/mostrar",mostrarTabla); 
 
@@ -52,7 +52,7 @@ function respuestaAgregar(respuesta){
 }
 
 function cargarOpciones() {
-    
+    //era para clasificar por categorias
     var opciones = ['<option value=0>Seleccione una opcion</option>'
     +'<option value=1>pesas</option>'+'<option value=3>bandas</option>']
 
@@ -61,16 +61,15 @@ function cargarOpciones() {
 }
 
 function clickMostrar(){
+    //esto es para cuando hago una seleccion en el select
     enviarParametrosGET(miBackEnd + "producto/mostrar", mostrarTabla);
 }
 
-function respuestaServidor(respuesta){
-    alert("llego respuesta");
-}
+
 
 
 function confirmarBorrar(){
-
+    //esta era una confirmacion para borrar
     return confirm('Estás seguro que deseas eliminar el registro?');
 
 }
@@ -90,26 +89,14 @@ function mostrarTabla(valor){
         '<td>'+element.desc+'</td>'+
         '<td>'+element.precio+'</td>'+
         '<td>'+element.categoria+'</td>'+
-        '<td><a href="" class="btn btn-success" >editar</a></td>'+
-        '<td><a href="" class="btn btn-danger" onclick="">borrar</a></td>'+
+        /*'<td><a href="" class="btn btn-success" >editar</a></td>'+
+        '<td><a href="" class="btn btn-danger" onclick="">borrar</a></td>'+*/
         '</tr>' );
-        
+        //era para agregar boton de borrar y modificar
     });
 
     $('tableProducto').innerHTML=opciones;
-    /*
-    for(var i=0;i<valor.length; i++){
-        $('tableProducto').innerHTML=
-        '<tr >'+
-        '<th scope="row">'+valor[i].nombre+'</th>'+
-        '<td>'+valor[i].desc+'</td>'+
-        '<td>'+valor[i].precio+'</td>'+
-        '<td>'+valor[i].categoria+'</td>'+
-        '<td><a href="" class="btn btn-success" >editar</a></td>'+
-        '<td><a href="" class="btn btn-danger" onclick="">borrar</a></td>'+
-        '</tr>'; 
-
-    } */
+    
 
 
 }
