@@ -81,7 +81,7 @@ function mostrarTabla(valor){
     var opciones=[]; 
 
 
-    analizaJSON.array.forEach(element => {
+    analizaJSON.forEach(element => {
         opciones.push('<tr >'+
         '<th scope="row">'+element.nombre+'</th>'+
         '<td>'+element.desc+'</td>'+
