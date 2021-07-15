@@ -1,5 +1,5 @@
 //agrega funcion load a HTML; 
-addEventListener("load",load); 
+addEventListener("load",load)
 
 
 // aca llega con "https://localhost:8080/Registro/Nuevo" por POST
@@ -16,17 +16,10 @@ function $(nombre)
 
 
 function load(){
-   
     //alert(boton)
-    document.getElementById("btnGuardar").addEventListener("click",click);
-
-    
+    document.getElementById("btnGuardar").addEventListener("click",click)
 }
 
-
-function clickLogin(){
-    window.location.assign("https://tiendapushup.herokuapp.com/login.html");
-}
 
 function click(){
     enviarParametrosPOST(miBackEnd + "signin/enviar", respuestaServidor);
@@ -75,7 +68,7 @@ function enviarParametrosPOST(servidor,funcionARealizar){
         }
     }
     //esto va siempre cuando se hace un formulario
-   // xmlhttp.setRequestHeader("enctype","multipart/form-data");
+    xmlhttp.setRequestHeader("enctype","multipart/form-data");
 
     //envio el mensaje 
     xmlhttp.send(datos);

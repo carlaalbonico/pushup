@@ -1,5 +1,5 @@
 //agrega funcion load a HTML; 
-addEventListener("load",load); 
+addEventListener("load",load);
  
 //variable del servidor Heroku
 var miBackEnd = "https://apppushup.herokuapp.com/";
@@ -15,13 +15,7 @@ function $(nombre)
 
 function load(){
     //alert(boton)
-    document.getElementById("btnEnviar").addEventListener("click",click);
-     document.getElementById("btnSignin").addEventListener("click",clickSignin);
-}
-
-
-function clickSignin(){
-    window.location.assign("https://tiendapushup.herokuapp.com/signin.html");
+    document.getElementById("btnEnviar").addEventListener("click",click)
 }
 
 function click(){
