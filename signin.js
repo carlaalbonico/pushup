@@ -16,13 +16,17 @@ function $(nombre)
 
 
 function load(){
-    //alert(boton)
-    document.getElementById("btnGuardar").addEventListener("click",click)
+    
+    document.getElementById("btnGuardar").addEventListener("click",click); 
+    document.getElementById("btnLogin").addEventListener("click",clickLogin);
 }
 
 
 function click(){
     enviarParametrosPOST(miBackEnd + "signin/enviar", respuestaServidor);
+}
+function clickLogin(){
+    window.location.assign("https://tiendapushup.herokuapp.com/login.html");
 }
 
 function respuestaServidor(respuesta){
