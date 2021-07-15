@@ -52,7 +52,8 @@ function respuestaAgregar(respuesta){
 
 function cargarOpciones() {
     
-    var opciones = ['<option value=0>Seleccion una opcion</option>']
+    var opciones = ['<option value=0>Seleccione una opcion</option>'
+    +'<option value=1>pesas</option>'+'<option value=3>bandas</option>']
 
 
     $("slctCategoria").innerHTML = opciones;
