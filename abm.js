@@ -17,7 +17,7 @@ function load(){
 
     cargarOpciones(); 
 
-    enviarParametrosGET(miBackEnd + "producto/mostrar"); 
+    enviarParametrosGET(miBackEnd + "producto/mostrar",mostrarTabla); 
 
 
     document.getElementById("btnAgregar").addEventListener("click",click);
@@ -75,9 +75,27 @@ function confirmarBorrar(){
 
 }
 
-function mostrarTabla(rta){
+function mostrarTabla(valor){
 
-    for(var i=0;i<rta.length; i++){
+    var analizaJSON =JSON.parse(valor); 
+    var opciones=[]; 
+
+
+    analizaJSON.array.forEach(element => {
+        opciones.push('<tr >'+
+        '<th scope="row">'+element.nombre+'</th>'+
+        '<td>'+element.desc+'</td>'+
+        '<td>'+element.precio+'</td>'+
+        '<td>'+element.categoria+'</td>'+
+        '<td><a href="" class="btn btn-success" >editar</a></td>'+
+        '<td><a href="" class="btn btn-danger" onclick="">borrar</a></td>'+
+        '</tr>' );
+        
+    });
+
+    $('tableProducto').innerHTML=opciones;
+
+    /*for(var i=0;i<rta.length; i++){
         $('tableProducto').innerHTML=
         '<tr >'+
         '<th scope="row">'+rta[i].nombre+'</th>'+
@@ -88,12 +106,12 @@ function mostrarTabla(rta){
         '<td><a href="" class="btn btn-danger" onclick="">borrar</a></td>'+
         '</tr>'; 
 
-    } 
+    } */
 
 
 }
 
-function enviarParametrosGET(servidor){
+function enviarParametrosGET(servidor,funcionARealizar){
 
     //Declaro el objeto
     var xmlhttp = new XMLHttpRequest();
@@ -106,8 +124,8 @@ function enviarParametrosGET(servidor){
         if(xmlhttp.readyState == XMLHttpRequest.DONE){
 
             if(xmlhttp.status == 200){
-                console.log(xmlhttp.responseText);
-                //funcionARealizar(xmlhttp.responseText);
+                //console.log(xmlhttp.responseText);
+                funcionARealizar(xmlhttp.responseText);
             }
             else{
                 alert("Ocurrio un error");
