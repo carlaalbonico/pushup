@@ -77,7 +77,7 @@ function confirmarBorrar(){
 
 function mostrarTabla(valor){
 
-    var analizaJSON =JSON.parse(valor); 
+   /* var analizaJSON =JSON.parse(valor); 
     var opciones=[]; 
 
 
@@ -93,20 +93,20 @@ function mostrarTabla(valor){
         
     });
 
-    $('tableProducto').innerHTML=opciones;
+    $('tableProducto').innerHTML=opciones;*/
 
-    /*for(var i=0;i<rta.length; i++){
+    for(var i=0;i<valor.length; i++){
         $('tableProducto').innerHTML=
         '<tr >'+
         '<th scope="row">'+rta[i].nombre+'</th>'+
-        '<td>'+rta[i].desc+'</td>'+
-        '<td>'+rta[i].precio+'</td>'+
-        '<td>'+rta[i].categoria+'</td>'+
+        '<td>'+valor[i].desc+'</td>'+
+        '<td>'+valor[i].precio+'</td>'+
+        '<td>'+valor[i].categoria+'</td>'+
         '<td><a href="" class="btn btn-success" >editar</a></td>'+
         '<td><a href="" class="btn btn-danger" onclick="">borrar</a></td>'+
         '</tr>'; 
 
-    } */
+    } 
 
 
 }
