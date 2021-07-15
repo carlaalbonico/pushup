@@ -17,7 +17,7 @@ function load(){
 
     cargarOpciones(); 
 
-    enviarParametrosGET(miBackEnd + "producto/mostrar", mostrarTabla); 
+    enviarParametrosGET(miBackEnd + "producto/mostrar"); 
 
 
     document.getElementById("btnAgregar").addEventListener("click",click);
@@ -35,7 +35,7 @@ function click(){
 }
 
 
-function respuestaAgregar(respuesta){
+/*function respuestaAgregar(respuesta){
     var opciones = ['<option value=0>Seleccion una opcion</option>']
     
     //actualiza campos a blanco
@@ -43,12 +43,12 @@ function respuestaAgregar(respuesta){
     $("txtNewDesc").value = "";
     $("txtNewPrecio").value = "";
 
-    $("slctNwCategoria").innerHTML = opciones;
+    //$("slctNwCategoria").innerHTML = opciones;
 
     //escribe mensaje
     $("mensajeAgregar").innerHTML = respuesta;
     
-}
+}*/
 
 function cargarOpciones() {
     
